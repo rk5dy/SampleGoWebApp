@@ -1,3 +1,4 @@
+#stupid comment here
 docker container stop $(docker container ls -q)
 docker container prune -f
 docker rmi $(docker images | grep \<none\> | awk '{ print $3 }')
