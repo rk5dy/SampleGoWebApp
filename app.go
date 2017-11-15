@@ -13,7 +13,7 @@ func init() {
 }
 
 func me(res http.ResponseWriter, req *http.Request) {
-	err := tpl.ExecuteTemplate(res, "index.gohtml", nil)	
+	err := tpl.ExecuteTemplate(res, "index.gohtml", nil)
 	io.WriteString(res, "My name is Rock Kim")
 	HandleError(res, err)
 }
@@ -25,7 +25,7 @@ func dog(res http.ResponseWriter, req *http.Request) {
 func main() {
 	http.HandleFunc("/me", me)
 	http.HandleFunc("/dog", dog)
-	http.ListenAndServe(":8080", nil) 
+	http.ListenAndServe(":8080", nil)
 }
 
 func HandleError(res http.ResponseWriter, err error) {
